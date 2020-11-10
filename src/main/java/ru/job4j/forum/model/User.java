@@ -1,7 +1,8 @@
 package ru.job4j.forum.model;
 
-import java.util.Objects;
+import lombok.Data;
 
+@Data
 public class User {
 
     private String name;
@@ -10,25 +11,5 @@ public class User {
         User user = new User();
         user.setName(name);
         return user;
-    }
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
-        return Objects.equals(name, user.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name);
     }
 }

@@ -1,5 +1,4 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
@@ -15,11 +14,6 @@
     <title>Форум job4j</title>
 </head>
 <body>
-
-<div>
-    Login as : ${user.username}
-</div>
-
 <div class="container mt-3">
     <div class="row">
         <h4>Форум job4j</h4>
@@ -42,7 +36,7 @@
                     <td>${post.name}
                         <a href='<c:url value="/edit?id=${post.id}"/>'>Редактировать</a>
                     </td>
-                    <td>${post.desc}</td>
+                    <td><c:out value="${post.desc}"/></td>
                     <td><fmt:formatDate value="${post.created}" pattern="dd MMMM yyyy" /></td>
                 </tr>
             </c:forEach>
