@@ -13,9 +13,9 @@ public class PostMem {
     private static int incId = 0;
 
     private PostMem() {
-        posts.put(incId(), Post.of("Продаю машину ладу 01."));
-        posts.put(incId(), Post.of("Продаю машину ладу 02."));
-        posts.put(incId(), Post.of("Продаю машину ладу 03."));
+//        posts.put(incId(), Post.of("Продаю машину ладу 01."));
+//        posts.put(incId(), Post.of("Продаю машину ладу 02."));
+//        posts.put(incId(), Post.of("Продаю машину ладу 03."));
     }
 
     public List<Post> getAll() {
@@ -42,6 +42,6 @@ public class PostMem {
 
     public void update(Post post) {
         findById(post.getId()).setName(post.getName());
-        findById(post.getId()).setDesc(post.getDesc());
+        findById(post.getId()).setDescription(post.getDescription());
     }
 }

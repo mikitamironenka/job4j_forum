@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import ru.job4j.forum.model.Post;
 import ru.job4j.forum.service.PostService;
 
-import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 
 @Controller
 public class PostControl {
@@ -28,7 +28,7 @@ public class PostControl {
 
     @PostMapping("/edit")
     public String edit(@ModelAttribute Post post) {
-        postServices.update(post);
+        postServices.   update(post);
         return "redirect:/index";
     }
 
@@ -39,6 +39,7 @@ public class PostControl {
 
     @PostMapping("/save")
     public String save(@ModelAttribute Post post) {
+        post.setCreated(new Date());
         postServices.create(post);
         return "redirect:/";
     }

@@ -14,7 +14,7 @@
         </tr>
         <tr>
             <td>Описание:</td>
-            <td><input type='text' name='text'></td>
+            <td><input type='text' name='description'></td>
         </tr>
         <tr>
             <td colspan='2'><input name="submit" type="submit" value="Сохранить" /></td>
