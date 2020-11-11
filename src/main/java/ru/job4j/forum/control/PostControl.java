@@ -28,7 +28,7 @@ public class PostControl {
 
     @PostMapping("/edit")
     public String edit(@ModelAttribute Post post) {
-        postServices.   update(post);
+        postServices.update(post);
         return "redirect:/index";
     }
 
