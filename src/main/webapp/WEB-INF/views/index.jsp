@@ -19,7 +19,9 @@
     <div class="row">
         <h4>Форум job4j</h4>
     </div>
-
+    <div>
+        Login as : ${user.username}
+    </div>
     <a href="<c:url value='/create'/>">Добавить тему</a>
 
     <div class="row">

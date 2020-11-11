@@ -3,19 +3,21 @@
 <html>
 <body>
 
-
+<div class="row">
+    <h4>Регистрация</h4>
+</div>
 <form name=,'login' action="<c:url value='/reg'/>" method='POST'>
     <table>
         <tr>
-            <td>UserName:</td>
+            <td>Введите имя:</td>
             <td><input type='text' name='username'></td>
         </tr>
         <tr>
-            <td>Password:</td>
+            <td>Введите пароль:</td>
             <td><input type='password' name='password'/></td>
         </tr>
         <tr>
-            <td colspan='2'><input name="submit" type="submit" value="submit" /></td>
+            <td colspan='2'><input name="submit" type="submit" value="Подтвердить" /></td>
         </tr>
     </table>
 </form>

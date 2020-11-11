@@ -1,9 +1,12 @@
 package ru.job4j.forum.service;
 
 import org.springframework.stereotype.Service;
+import ru.job4j.forum.model.Authority;
 import ru.job4j.forum.model.Post;
+import ru.job4j.forum.model.User;
+import ru.job4j.forum.repository.AuthorityRepository;
 import ru.job4j.forum.repository.PostRepository;
-
+import ru.job4j.forum.repository.UserRepository;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -12,9 +15,13 @@ import java.util.Optional;
 public class PostService {
 
     private final PostRepository postRepository;
+    private final UserRepository userRepository;
+    private final AuthorityRepository authorityRepository;
 
-    public PostService(PostRepository postService) {
+    public PostService(PostRepository postService, UserRepository userRepository, AuthorityRepository authorityRepository) {
         this.postRepository = postService;
+        this.userRepository = userRepository;
+        this.authorityRepository = authorityRepository;
     }
 
     public List<Post> getAll() {
@@ -41,5 +48,13 @@ public class PostService {
 
     public void create(Post post) {
         postRepository.save(post);
+    }
+
+    public Authority findByAuthority(String authoriry) {
+        return authorityRepository.findByAuthority(authoriry);
+    }
+
+    public void saveUser(User user) {
+        userRepository.save(user);
     }
 }
