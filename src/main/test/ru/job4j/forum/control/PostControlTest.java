@@ -37,8 +37,6 @@ class PostControlTest {
             .andExpect(view().name("post/create"));
     }
 
-
-
     @Test
     @WithMockUser
     public void whenCreatePostShouldReturnDefaultMessage() throws Exception {
